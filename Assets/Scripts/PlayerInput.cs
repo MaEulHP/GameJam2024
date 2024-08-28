@@ -22,8 +22,8 @@ public class PlayerInput : MonoBehaviour
             slide = false;
             return;
         }
-        fire = Input.GetButton(fireBtnName);
-        jump = Input.GetButton(jumpBtnName);
+        fire = Input.GetKeyDown(KeyCode.Mouse0);
+        jump = Input.GetKeyDown(KeyCode.Space);
         slide = Input.GetButton(slideBtnName);
         Debug.Log(slide); 
     }

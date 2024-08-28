@@ -30,9 +30,12 @@ public class Player : MonoBehaviour
         if(playerInput.fire){
             Shot();
         }
-        if(playerInput.slide){
-            pAnimator.SetTrigger("Slide");
-            
+        if (playerInput.slide) {
+            pAnimator.SetBool("isSlide", true);
+
+        }
+        else if (playerInput.slide == false){
+            pAnimator.SetBool("isSlide", false);
         }
     }
     public void Jump(){
@@ -64,5 +67,19 @@ public class Player : MonoBehaviour
             pAnimator.SetBool("Jump", false);
         }
     }
+    void StartSliding()
+    {
+        var collider = GetComponent<BoxCollider2D>();
+        collider.size = new Vector2(1.5f, 0.5f);
+        collider.offset = new Vector2(0f, -0.25f);
+    }
+
+    void StopSliding()
+    {
+        var collider = GetComponent<BoxCollider2D>();
+        collider.size = new Vector2(0.5f, 1.5f);
+        collider.offset = new Vector2(0f, 0f);
+    }
+
 
 }
