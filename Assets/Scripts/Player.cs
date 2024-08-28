@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public void Jump(){
         pRigidbody.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
         jumpable = false;
+        pAnimator.SetBool("Jump", true);
     }
     public void Shot(){
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Ground"){
             jumpable = true;
+            pAnimator.SetBool("Jump", false);
         }
     }
 
