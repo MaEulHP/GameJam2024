@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private PlayerInput playerInput;
     private Rigidbody2D pRigidbody;
     private Animator pAnimator;
+    private Collider2D BoxCollider2D;
     
     public bool jumpable = true;
     Vector3 mousePos;
@@ -32,14 +33,16 @@ public class Player : MonoBehaviour
         }
         if (playerInput.slide) {
             pAnimator.SetBool("isSlide", true);
+            StartSliding();
 
         }
         else if (playerInput.slide == false){
             pAnimator.SetBool("isSlide", false);
+            StopSliding();
         }
     }
     public void Jump(){
-        pRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+        pRigidbody.AddForce(new Vector2(0f, 10.5f), ForceMode2D.Impulse);
         jumpable = false;
         pAnimator.SetBool("Jump", true);
     }
