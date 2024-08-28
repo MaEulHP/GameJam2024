@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 160b5dcad8214f04f89153bd9e112cb0
+guid: 528841a8498c21f4f8b87b344cb9380f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpsideObs_0
+      name: Boss_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 13
-        width: 15
-        height: 26
+        x: 79
+        y: 23
+        width: 235
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5725dca887bd113489206af69cd8d9ff
-      internalID: -1039393344
+      spriteID: f912b4c8a8e0c2e4788de861fa9e85f2
+      internalID: 219896053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpsideObs_1
+      name: Boss_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 13
-        width: 25
-        height: 30
+        x: 445
+        y: 24
+        width: 229
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a099abcb24cfe3e4e890765884e155bb
-      internalID: -1141125442
+      spriteID: 15f108d8053187e4898f97b1e50e2139
+      internalID: 1619622755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpsideObs_2
+      name: Boss_
       rect:
         serializedVersion: 2
-        x: 57
-        y: 10
-        width: 41
-        height: 34
+        x: 823
+        y: 24
+        width: 225
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a222ebe6e6ebaae49b346b872461c7d3
-      internalID: -1310204957
+      spriteID: 00a75e10fc1183741b46313a1880c4a7
+      internalID: -526313333
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UpsideObs_0: -1039393344
-      UpsideObs_1: -1141125442
-      UpsideObs_2: -1310204957
+      Boss_: -526313333
+      Boss_0: 219896053
+      Boss_1: 1619622755
+      Boss_4: -525780637
+      Boss_6: -330010716
+      Boss_7: 75160629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

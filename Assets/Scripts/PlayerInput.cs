@@ -7,9 +7,11 @@ public class PlayerInput : MonoBehaviour
 {
     public string jumpBtnName = "Jump";
     public string fireBtnName = "Fire1";
+    public string slideBtnName = "Sliding";
 
     public bool fire { get; private set; }
     public bool jump { get; private set; }
+    public bool slide { get; private set; }
 
     // Update is called once per frame
     void Update()
@@ -17,9 +19,12 @@ public class PlayerInput : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.isGameover) {
             fire = false;
             jump = false;
+            slide = false;
             return;
         }
         fire = Input.GetButton(fireBtnName);
-        jump = Input.GetButton(jumpBtnName); 
+        jump = Input.GetButton(jumpBtnName);
+        slide = Input.GetButton(slideBtnName);
+        Debug.Log(slide); 
     }
 }

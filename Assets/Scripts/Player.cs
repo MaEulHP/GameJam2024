@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
         pAnimator = GetComponent<Animator>();
         cam = Camera.main;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -30,10 +29,13 @@ public class Player : MonoBehaviour
         if(playerInput.fire){
             Shot();
         }
+        if(playerInput.slide){
+            pAnimator.SetTrigger("Slide");
+            
+        }
     }
-
     public void Jump(){
-        pRigidbody.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+        pRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
         jumpable = false;
         pAnimator.SetBool("Jump", true);
     }
