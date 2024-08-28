@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     }
     private static GameManager m_instance;
 
-    private float score = 0;
+    public float score = 0;
     public float lastTime = 30; 
     public bool isGameover {get; private set;}
 
