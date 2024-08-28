@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Obstacle
   - Tracer
+  - CeilingObs
   layers:
   - Default
   - TransparentFX

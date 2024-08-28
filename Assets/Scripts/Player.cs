@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     
     public bool jumpable = true;
     Vector3 mousePos;
+    Vector2 mPos2D;
     Camera cam;
     void Start()
     {
@@ -41,7 +42,21 @@ public class Player : MonoBehaviour
     }
     public void Shot(){
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
-        Debug.Log(mousePos);
+        Vector2 mPos2D = new Vector2(mousePos.x, mousePos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mPos2D, Vector2.zero);
+        if(hit.collider != null){
+            GameObject hitObj = hit.collider.gameObject;
+            if(hitObj.CompareTag("Obstacle")){
+                Destroy(hitObj);
+            }
+            else if (hitObj.CompareTag("CeilingObs")){
+                CeilingObs cObs = hitObj.GetComponent<CeilingObs>();
+                if(cObs != null){
+                    cObs.isHitted = true;
+                }
+            }
+        }
     }
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Ground"){

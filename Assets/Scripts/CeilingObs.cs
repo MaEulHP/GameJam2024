@@ -19,15 +19,15 @@ public class CeilingObs : Obstacle
             Destroy(gameObject);
         }
     }
-    public new void OnTriggerEnter2D(Collider2D other){
-        base.OnTriggerEnter2D(other);
-        if(other.gameObject.CompareTag("Bullet")){
-            isHitted = true;
-        }
-        else if(other.gameObject.CompareTag("Ground")){
-            isHitted = false;
+    // public new void OnTriggerEnter2D(Collider2D other){
+    //     base.OnTriggerEnter2D(other);
+    //     if(other.gameObject.CompareTag("Bullet")){
+    //         isHitted = true;
+    //     }
+    //     else if(other.gameObject.CompareTag("Ground")){
+    //         isHitted = false;
 
-        }
-    }
+    //     }
+    // }
 
 }

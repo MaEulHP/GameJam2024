@@ -9,7 +9,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         if(transform.position.x > -10f){
-            transform.Translate(-6f * Time.deltaTime, 0f, 0f);
+            transform.Translate(-4f * Time.deltaTime, 0f, 0f);
         }
         else {
             Destroy(gameObject);
@@ -19,7 +19,7 @@ public class Obstacle : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             GameManager.instance.lastTime -= 2;
         }
-        else if(other.gameObject.CompareTag("Tracer")){
+        if(other.gameObject.CompareTag("Tracer")){
             GameManager.instance.lastTime += 1;
         }
         Destroy(gameObject);
