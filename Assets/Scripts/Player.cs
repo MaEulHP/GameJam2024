@@ -45,11 +45,13 @@ public class Player : MonoBehaviour
         pRigidbody.AddForce(new Vector2(0f, 10.5f), ForceMode2D.Impulse);
         jumpable = false;
         pAnimator.SetBool("Jump", true);
+        SoundManager.instance.Playjump();
     }
     public void Shot(){
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
         Vector2 mPos2D = new Vector2(mousePos.x, mousePos.y);
-
+        SoundManager.instance.PlayshootFire();
+        pAnimator.SetTrigger("Shoot");
         RaycastHit2D hit = Physics2D.Raycast(mPos2D, Vector2.zero);
         if(hit.collider != null){
             GameObject hitObj = hit.collider.gameObject;
