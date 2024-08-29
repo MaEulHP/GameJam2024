@@ -9,7 +9,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         if(transform.position.x > -10f){
-            transform.Translate(-4f * Time.deltaTime, 0f, 0f);
+            transform.Translate(-5f * Time.deltaTime, 0f, 0f);
         }
         else {
             Destroy(gameObject);

@@ -2092,7 +2092,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bgm: {fileID: 1189671317}
   shoot: {fileID: 849196577}
-  jump: {fileID: 982135274}
+  jumpSound: {fileID: 982135274}
+  bClip:
+  - {fileID: 8300000, guid: 2cd9bcba431f99a40adee0dba35b625d, type: 3}
+  sClip:
+  - {fileID: 8300000, guid: 2faf4b41f7b3b3145810fb5ddb528d46, type: 3}
+  jClip:
+  - {fileID: 8300000, guid: b8a19ad8fede085409b420be2115734c, type: 3}
 --- !u!4 &1807513064
 Transform:
   m_ObjectHideFlags: 0
@@ -2265,7 +2271,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.279611}
+  m_Offset: {x: 0, y: -0.009232342}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2276,7 +2282,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.25, y: 2.573148}
+  m_Size: {x: 2.25, y: 1.9954613}
   m_EdgeRadius: 0
 --- !u!50 &1953597783
 Rigidbody2D:

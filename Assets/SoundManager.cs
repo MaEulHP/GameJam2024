@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
+    public static SoundManager instance{
+        get
+        {
+            if(m_instance == null){
+                m_instance = FindObjectOfType<SoundManager>();
+            }
+
+            return m_instance;
+        }
+    }
+    private static SoundManager m_instance;
     void Awake(){
-        if(instance != null){
+        if(instance != this){
             Destroy(gameObject);
         }
-        return;
     }
 
-    public AudioSource Bgm, shoot, jump;
-    private AudioClip bClip, sClip, jClip;
+    public AudioSource Bgm, shoot, jumpSound;
+    public AudioClip[] bClip, sClip, jClip;
 
-    public void PlayBgm(){
-        Bgm.clip = bClip;
+    public void PlayBgm(int inx){
+        Bgm.clip = bClip[inx];
         Bgm.Play();
     }
-    public void PlayshootFire(){
-        shoot.clip = sClip;
+    public void PlayshootFire(int inx){
+        shoot.clip = sClip[inx];
         shoot.Play();
     }
-    public void Playjump(){
-        jump.clip = jClip;
-        jump.Play();
+    public void Playjump(int inx){
+        jumpSound.clip = jClip[inx];
+        jumpSound.Play();
     }
 }

@@ -11,7 +11,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
         normalValue = Mathf.InverseLerp(0f, 30f, GameManager.instance.lastTime);
-        distance = Mathf.Lerp(0f, 10f, normalValue) + 3f;
+        distance = Mathf.Lerp(0f, 10f, normalValue) + 3.2f;
         transform.position = new Vector3(p.transform.position.x-distance, transform.position.y, 0);
     }
 }

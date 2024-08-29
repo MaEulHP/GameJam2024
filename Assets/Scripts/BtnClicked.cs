@@ -21,7 +21,7 @@ public class BtnClicked : MonoBehaviour
         SceneManager.LoadScene("Cartoon");
     }
     void gameExit(){
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     

@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -42,15 +40,15 @@ public class Player : MonoBehaviour
         }
     }
     public void Jump(){
+        SoundManager.instance.Playjump(0);
         pRigidbody.AddForce(new Vector2(0f, 10.5f), ForceMode2D.Impulse);
         jumpable = false;
         pAnimator.SetBool("Jump", true);
-        SoundManager.instance.Playjump();
     }
     public void Shot(){
+        SoundManager.instance.PlayshootFire(0);
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
         Vector2 mPos2D = new Vector2(mousePos.x, mousePos.y);
-        SoundManager.instance.PlayshootFire();
         pAnimator.SetTrigger("Shoot");
         RaycastHit2D hit = Physics2D.Raycast(mPos2D, Vector2.zero);
         if(hit.collider != null){

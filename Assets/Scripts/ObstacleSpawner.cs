@@ -10,7 +10,7 @@ public class ObstacleSpawner : MonoBehaviour
     void Start()
     {
         RefillBag();
-        InvokeRepeating("SpawnObs", 1f, 4f);
+        InvokeRepeating("SpawnObs", 1f, 3f);
     }
 
     void RefillBag(){
